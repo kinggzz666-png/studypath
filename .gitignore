@@ -1,0 +1,45 @@
+cd ~/studypath
+
+cat > .gitignore << 'EOF'
+# 环境变量 - 绝对不能提交
+.env
+.env.*
+!.env.example
+
+# 数据目录
+database/
+mongo_data/
+redis_data/
+
+# 日志
+logs/
+*.log
+
+# 上传文件
+uploads/
+
+# SSL证书
+ssl/
+*.pem
+*.key
+*.crt
+
+# Node modules
+node_modules/
+package-lock.json
+
+# 备份
+backups/
+*.dump
+*.backup
+
+# 系统文件
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+
+# IDE
+.vscode/
+.idea/
+EOF
